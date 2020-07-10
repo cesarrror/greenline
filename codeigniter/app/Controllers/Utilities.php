@@ -13,6 +13,8 @@ class Utilities extends BaseController
 
         echo json_encode($csrfData);
 	}
-
+    public function alvc(){
+        echo "POS ALVC";
+    }
 
 }

@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "backoffice"
+    }
+  },
+  "defaultProject": "backoffice",
+  "cli": {
+    "analytics": false
+  }
 }
