@@ -1,0 +1,79 @@
+.card
+{
+    margin-top: 30px;
+}
+
+.card-title
+{
+    font-size: 16px;
+    float: left;
+    color: #acacac;
+}
+
+.icon-wrapper
+{
+    background-color: #ffd977;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 4px;
+    color: #bd8802;
+    float: right;
+}
+
+.icon-wrapper.grey
+{
+    background-color: #e6e6e6;
+    color: #838383;
+}
+
+.card-text
+{
+    font-size: 20px;
+}
+
+.statistic.success
+{
+    color: #0acf97;
+}
+
+.statistic.danger
+{
+    color: #fa5c7c;
+}
+
+.refresh-statistic
+{    
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 4px;
+    color: #f37804;
+    float: right;
+    cursor: pointer;
+    transition: all ease-in-out 0.2s;
+    -webkit-transition: all ease-in-out 0.2s;
+    -moz-transition: all ease-in-out 0.2s;
+    -ms-transition: all ease-in-out 0.2s;
+    -o-transition: all ease-in-out 0.2s;
+}
+
+.refresh-statistic:hover
+{
+    color: #ffb570;
+}
+
+.chart-wrapper
+{
+    max-height: 375px;
+}
+
+.card-body .dropdown
+{
+    float: right;
+}
+
+.card-body .dropdown .icon-wrapper.grey
+{
+    line-height: 30px;
+}

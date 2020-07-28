@@ -1,0 +1,33 @@
+.bg-dark
+{
+    background-color: #121212 !important;
+}
+
+.navbar-brand
+{
+    text-transform: uppercase;
+}
+
+.avatar
+{
+    width: 30px;
+    height: 30px;
+    border-radius: 90px;
+    float: left;
+    margin-right: 10px;
+}
+
+.avatar img
+{
+    height: 30px;
+    width: 30px;
+    border-radius: 90px;
+    margin-right: 10px;
+    border: solid 2px #FFFFFF;
+}
+
+
+.d-md-block
+{
+    margin-left: 10px;
+}

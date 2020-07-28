@@ -5,11 +5,7 @@
   "projects": {
     "backoffice": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "style": "sass"
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -28,7 +24,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.sass"
+              "src/styles.css"
             ],
             "scripts": []
           },
@@ -92,9 +88,11 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.sass"
+              "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "../node_modules/jquery/dist/jquery.min.js"
+            ]
           }
         },
         "lint": {
@@ -123,10 +121,6 @@
           }
         }
       }
-    }
-  },
-  "defaultProject": "backoffice",
-  "cli": {
-    "analytics": false
-  }
+    }},
+  "defaultProject": "backoffice"
 }

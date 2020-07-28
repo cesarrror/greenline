@@ -5,6 +5,17 @@
   To learn more about this file see: https://angular.io/config/solution-tsconfig.
 */
 {
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "ES5",
+    "baseUrl": "src",
+    "paths": {
+      "@/*": [
+          "app/*"
+      ]
+    }
+  },
   "files": [],
   "references": [
     {

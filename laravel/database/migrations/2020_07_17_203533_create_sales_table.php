@@ -14,7 +14,12 @@ class CreateSalesTable extends Migration
     public function up()
     {
         Schema::create('sales', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->unsignedInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->char('ticket', 8);
+            $table->float('subtotal');
+            $table->float('taxes');
             $table->timestamps();
         });
     }

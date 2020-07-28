@@ -1,0 +1,172 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;700&family=Raleway:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+/* font-family: 'Assistant', sans-serif;
+font-family: 'Raleway', sans-serif; 
+font-family: 'Roboto', sans-serif;
+*/
+
+body
+{
+    font-family: 'Raleway', sans-serif;
+}
+
+.btn
+{
+    border-radius: 0px;
+    text-transform: capitalize;
+    font-family: 'Assistant', sans-serif;
+}
+
+.btn-primary
+{
+    background-color: #ffc837;
+    border: solid 1px #ffc837;
+}
+
+.btn-primary:hover
+{
+    background-color: #ffb700;
+    border: solid 1px #ffb700;
+}
+
+.btn-primary:active
+{
+    background-color: #d69a01 !important;
+    border: solid 1px #d69a01 !important;
+}
+
+.custom-control-label::before{
+    background-color:#d69a01 !important;
+}
+
+.custom-checkbox 
+.custom-control-input:checked~
+.custom-control-label::before{background-color:#d69a01 !important}
+
+/* .custom-checkbox 
+.custom-control-input:checked~
+.custom-control-label::after{background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E")} */
+
+.custom-checkbox 
+.custom-control-input:indeterminate~
+.custom-control-label::before{background-color:#d69a01 !important}
+
+.custom-checkbox 
+.custom-control-input:indeterminate~
+.custom-control-label::after{background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3E%3Cpath stroke='%23fff' d='M0 2h4'/%3E%3C/svg%3E")}
+
+.custom-checkbox 
+.custom-control-input:disabled:checked~
+.custom-control-label::before{background-color:#966c02 !important}
+
+.custom-checkbox 
+.custom-control-input:disabled:indeterminate~
+.custom-control-label::before{background-color: #966c02 !important}
+
+
+.sidebar
+{
+    background-color: #272323;
+    height: 100vh;
+    min-height: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.dashboard-content
+{
+    background-color: #fafbfe;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.dashboard-components
+{
+    height: calc(100vh - 56px);
+    padding-top: 2vh;
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+}
+
+.card
+{
+    border-color: #f1f1f1;
+}
+
+.numbers
+{
+    font-family: 'Roboto', sans-serif;
+}
+
+.numbers.numbers-1x
+{
+    font-size: 28px !important;
+    font-weight: bold;
+    color: #7c888b;
+}
+
+.numbers.numbers-6x
+{
+    font-size: 14px;
+}
+
+.numbers.numbers-6x.left
+{    
+    float: left;
+}
+
+.active
+{
+    color: #ff8008 !important;
+}
+
+.nav-link
+{
+    transition: all ease-in-out 0.2s;
+    -webkit-transition: all ease-in-out 0.2s;
+    -moz-transition: all ease-in-out 0.2s;
+    -ms-transition: all ease-in-out 0.2s;
+    -o-transition: all ease-in-out 0.2s;
+}
+
+.nav-link:hover
+{
+    color: #ffbe82 !important;
+}
+
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .sidebar
+    {
+        height: 60px;
+    }
+
+    .main-navbar
+    {
+        margin-top: 0px;
+    }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+    
+
+}
+
+.badge
+{
+    border-radius: 50px;
+    margin-top: 2px;
+}

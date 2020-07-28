@@ -1,0 +1,19 @@
+.dashboard-components .component-name
+{
+    text-transform: capitalize;
+    font-weight: bold;
+    color: #727272;
+}
+
+.dashboard-components .current-date
+{
+    background-color: rgba(200, 200, 200, 0.4);
+    padding: 10px;
+    border-radius: 3px;
+    width: 50%;
+    float: right;
+    color: #858585;
+    text-align: center;
+    font-size: 15px;
+
+}
