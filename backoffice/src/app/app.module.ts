@@ -15,6 +15,7 @@ import { NavbarComponent } from './components/dashboard/navbar/navbar.component'
 import { ErrorInterceptor } from "./helpers/error.interceptor";
 import { JwtInterceptor } from "./helpers/jwt.interceptors";
 import { IndexComponent } from './components/dashboard/index/index.component';
+import { TableComponent } from './components/dashboard/table/table.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { IndexComponent } from './components/dashboard/index/index.component';
     DashboardComponent,
     AlertComponent,
     NavbarComponent,
-    IndexComponent
+    IndexComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,

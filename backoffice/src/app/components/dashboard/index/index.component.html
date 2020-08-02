@@ -70,20 +70,8 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col col-12">
-                                <h5 class="card-title">Latest Sales</h5>
+                                <h5 class="card-title">Sales Progress</h5>
                                 <div class="icon-wrapper"><span class="fas fa-chart-line"></span></div>
-                                <!-- <div class="dropdown show">
-                                    <a class="btn icon-wrapper grey" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <i class="fas fa-ellipsis-v"></i>
-                                    </a>                                  
-                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-                                        <a class="dropdown-item" (click)="init()">Init</a>
-                                        <a class="dropdown-item" (click)="addSerie()">Add Serie</a>
-                                        <a class="dropdown-item" (click)="removeSerie()">Remove Serie</a>
-                                        <a class="dropdown-item" (click)="addPoint()">Add Point</a>
-                                        <a class="dropdown-item" (click)="removePoint()">Remove Point</a>
-                                    </div>
-                                </div> -->
                             </div>
                         </div>
                         <div [chart]="chart"></div>
@@ -95,6 +83,12 @@
 </div>
 <div class="row">
     <div class="col col-12">
-
+        <div class="card card-table">
+            <div class="card-body">
+                <h5 class="card-title">Latest Sales</h5>
+                <!-- <kraken-table [table]="dataTableData"></kraken-table> -->
+                
+            </div>
+        </div>
     </div>
 </div>

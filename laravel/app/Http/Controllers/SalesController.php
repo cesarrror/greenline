@@ -20,6 +20,29 @@ class SalesController extends Controller
     }
 
     /**
+     * Display a listing of the resource per page.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function page($page)
+    {
+
+        $role_information = Auth::user()->role()->get()->first();
+        
+        $role = $role_information->id;
+        $role_type = $role_information->description;
+
+        $offset = ( $page - 1 ) * 10;
+        $limit = $page * 10;
+
+        if($role_type !== 'Sales' || $role !== 3){
+            return Sales::orderBy('id', 'desc')->orderBy('created_at', 'desc')->skip($offset)->take($limit)->get();
+        }else{
+            return Sales::orderBy('id', 'desc')->orderBy('created_at', 'desc')->where('user_id', Auth::id())->skip($offset)->take($limit)->get();
+        }
+    }
+
+    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request

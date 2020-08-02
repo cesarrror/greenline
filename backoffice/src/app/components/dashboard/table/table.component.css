@@ -1,0 +1,63 @@
+.kraken-table
+{
+    width: 100%;
+    min-height: 300px;
+    height: auto;
+    max-height: 700px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 20px;
+    position: relative;
+    float: left;
+}
+
+.kraken-table thead
+{
+    background-color: #232323;
+    height: 40px;
+    border-radius: 5px 5px 0px 0px !important;
+}
+.kraken-table thead tr
+{
+    height: 40px;
+    color: #ffffff;
+}
+.kraken-table thead tr th
+{
+    padding: 0px 15px;
+    cursor: pointer;
+}
+.kraken-table thead tr th.center
+{
+    text-align: center;
+}
+.kraken-table thead tr th.right
+{
+    text-align: right;
+}
+.kraken-table thead tr th.left
+{
+    text-align: left;
+}
+
+.kraken-table tbody
+{
+    height: 40px;
+}
+
+.kraken-table tbody tr
+{
+    height: 40px;
+}
+
+.kraken-table tbody tr td
+{
+    padding: 0px 15px;
+    border: solid #ececec;
+    border-width: thin 0px thin 0px;
+}
+
+.kraken-table tbody tr td.center
+{
+    text-align: center;
+}

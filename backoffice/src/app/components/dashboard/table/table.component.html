@@ -1,0 +1,15 @@
+<table class="kraken-table">
+    <thead>
+        <tr>
+            <th scope="col" *ngFor="let header of headers" class="center">{{header}} <i *ngIf="sortable" class="fas fa-sort" (click)="SortElement($event);"></i></th>
+        </tr>
+    </thead>
+    <tbody id="kraken-tbody">
+        <tr *ngFor="let item of data" id="kraken-tr">
+            <td *ngFor="let field of item | keyvalue" class="center" [ngClass]="actionKey === field.key">{{field.value}}</td>
+        </tr>
+    </tbody>
+</table>
+<div class="pagination" *ngIf="pagination == true">
+    
+</div>

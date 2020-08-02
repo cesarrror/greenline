@@ -109,3 +109,4 @@ frontend/src/assets
 #VSCODE
 *.code-workspace
 .vscode
+*.htaccess
