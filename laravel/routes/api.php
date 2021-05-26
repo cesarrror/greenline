@@ -20,10 +20,8 @@ use App\Tickets;
 
 
 Route::group(['prefix' => 'auth'], function(){
-
     /****    O A U T H    ****/
-    Route::post('/login', 'AuthController@login');
-    
+    Route::post('/login', 'AuthController@login');    
 });
 
 
@@ -44,6 +42,7 @@ Route::middleware('auth:api')->group(function(){
     /****   T I C K E T S   ****/
     Route::get('/tickets', 'TicketsController@index');
     Route::post('/tickets', 'TicketsController@store');
+    Route::get('/tickets/page/{page}', 'TicketsController@page');
     Route::get('/tickets/{id}', 'TicketsController@show');
     Route::put('/tickets/{id}', 'TicketsController@update');
     Route::delete('/tickets/{id}', 'TicketsController@destroy');
@@ -56,5 +55,17 @@ Route::middleware('auth:api')->group(function(){
     Route::put('/sales/{id}', 'SalesController@update');
     Route::delete('/sales/{id}', 'SalesController@destroy');
 
+    /****   P R O D U C T S   ****/
+    Route::get('/products', 'ProductsController@index');
+    Route::post('/products', 'ProductsController@store');
+    Route::get('/products/page/{page}', 'ProductsController@page');
+    Route::get('/products/{id}', 'ProductsController@show');
+    Route::put('/products/{id}', 'ProductsController@update');
+    Route::delete('/products/{id}', 'ProductsController@destroy');
+
+    
+    /**** M I G U E L O N ****/
+    Route::get('/article/{id}', 'SalesController@getArticle');
+    Route::get('/getTicket', 'SalesController@getTicket');
 
 });
