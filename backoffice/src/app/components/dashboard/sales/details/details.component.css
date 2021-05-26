@@ -1,0 +1,60 @@
+.sale-details
+{
+    background-color: #ffd977 !important;
+}
+
+.sale-details .carcard-title
+{
+    bottom: 0;
+}
+
+.card-header
+{
+    border: none;
+    min-height: 140px;
+    color: #fbfbfb;
+}
+
+.avatar
+{
+    height: 150px;
+    width: 150px;
+    border: solid 5px #fbfbfb;
+    border-radius: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -90px;
+}
+
+.detail-header
+{
+    color: #7e7e7e;
+}
+
+.seller-name
+{
+    color: #000000;
+}
+
+.seller
+{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.title-separator
+{
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.img-thumbnail
+{
+    height: 30px;
+    width: 30px;
+    border-radius: 90px;
+    background-position: center;
+    background-size: cover;
+}

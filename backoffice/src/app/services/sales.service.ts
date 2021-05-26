@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { Observable, BehaviorSubject } from "rxjs";
 import { map } from "rxjs/operators";
+import { environment } from "../../environments/environment";
 
 import { Sales_Per_User } from "../models/sales.model";
 
@@ -16,7 +17,7 @@ export class SalesService {
   constructor(private http: HttpClient) {
     this.salesPerUserSubject = new BehaviorSubject<Sales_Per_User>(JSON.parse(sessionStorage.getItem('page')));
     this.salesPerUser = this.salesPerUserSubject.asObservable();
-    this.url = "http://localhost:8000";
+    this.url = environment.APIBase;
   }
 
   public get Page(): Sales_Per_User{
@@ -24,7 +25,15 @@ export class SalesService {
   }
 
   sales_per_user(page){
-    return this.http.get<any>(this.url+"/api/sales/page/"+page)
+    return this.http.get<any>(this.url+"api/sales/page/"+page)
+    .pipe(map(sales => {
+      this.salesPerUserSubject.next(sales);
+      return sales;
+    }));
+  }
+
+  sale_per_id(sale){
+    return this.http.get<any>(this.url+"api/sales/"+sale)
     .pipe(map(sales => {
       this.salesPerUserSubject.next(sales);
       return sales;

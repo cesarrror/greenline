@@ -12,13 +12,13 @@
 
 .icon-wrapper
 {
-    background-color: #ffd977;
+    background-color: #fff6ee;
     width: 40px;
     height: 40px;
     text-align: center;
     line-height: 40px;
     border-radius: 4px;
-    color: #bd8802;
+    color: #ff8008;
     float: right;
 }
 
@@ -76,4 +76,10 @@
 .card-body .dropdown .icon-wrapper.grey
 {
     line-height: 30px;
+}
+
+.buttons .btn
+{
+    margin-left: 2px;
+    margin-right: 2px;
 }

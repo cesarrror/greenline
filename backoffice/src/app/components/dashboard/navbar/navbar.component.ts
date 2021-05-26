@@ -19,5 +19,18 @@ export class NavbarComponent implements OnInit {
     }
   }
 
+  closeSession(){
+    this.AuthenticationService.logout()
+      .pipe()
+      .subscribe(
+        data => {
+          localStorage.clear();
+          window.location.reload();
+        },
+        error => {
+
+        }
+      )
+  }
 
 }

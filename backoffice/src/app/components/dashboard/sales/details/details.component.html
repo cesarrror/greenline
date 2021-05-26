@@ -1,0 +1,94 @@
+<div class="row">
+    <div class="col col-12 col-lg-4">
+        <div class="card card-table">
+            <div class="card-header sale-details">                
+                <h5 class="card-title">Sale Details</h5>
+            </div>
+            <div class="card-body">
+                <div class="loader" *ngIf="isLoadingSale">
+                    <img src="../../../../../assets/img/loading2.svg" height="60">
+                </div>
+                <div class="col col-12" *ngIf="!isLoadingSale">
+                    <div class="avatar" style="background-image: url('{{sale.user_id.avatar}}');"></div>
+                    <div class="col col-12 seller">
+                        <h5 class="seller-name">{{sale.user_id.first_name}} {{sale.user_id.last_name}}</h5>
+                        <span class="detail-header">Seller</span>
+                    </div>
+
+
+                    <div class="col col-12 title-separator">
+                        <h5 class="title">Seller Details</h5>
+                    </div>
+                    <div class="col col-12">
+                        <span class="detail-header">Status: </span><span>{{sale.user_id.active}}</span>
+                    </div>
+                    <div class="col col-12">
+                        <span class="detail-header">Mobile: </span><span>{{sale.user_id.celphone}}</span>
+                    </div>
+                    <div class="col col-12">
+                        <span class="detail-header">Email: </span><span>{{sale.user_id.email}}</span>
+                    </div>
+                    <div class="col col-12">
+                        <span class="detail-header">Role: </span> <span>{{sale.user_id.role_id}}</span>
+                    </div>
+
+                    
+                    <div class="col col-12 title-separator">
+                        <h5 class="title">Sale Details</h5>
+                    </div>
+                    <div class="col col-12">
+                        <span class="detail-header">Sale Date: </span><span>{{sale.created_at}}</span>
+                    </div>
+                    <div class="col col-12">
+                        <span class="detail-header">Ticket: </span><span>{{sale.ticket}}</span>
+                    </div>
+                    <div class="col col-12">
+                        <span class="detail-header">Subtotal: </span><span>${{sale.subtotal}}</span>
+                    </div>
+                    <div class="col col-12">
+                        <span class="detail-header">Taxes: </span> <span>${{sale.taxes}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col col-12 col-lg-8">
+        <div class="card card-table">
+            <div class="card-body">
+                <h5 class="card-title">Ticket Details</h5>
+                <div class="loader" *ngIf="isLoadingTicket">
+                    <img src="../../../../../assets/img/loading2.svg" height="60">
+                </div>    
+                <div class="col col-12" *ngIf="!isLoadingTicket">
+                    <table class="table">
+                        <thead class="thead-dark">
+                          <tr>
+                            <th scope="col"><i class="fas fa-image"></i></th>
+                            <th scope="col">Product</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Available</th>
+                            <th scope="col">Rate</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let product of sale.tickets">
+                            <th scope="row"><div class="img-thumbnail" style="background-image: url('{{product.product_id.image}}');"></div></th>
+                            <td>{{product.product_id.name}}</td>
+                            <td>{{product.product_id.price}}</td>
+                            <td>
+                                <div class="badge badge-success" *ngIf="product.product_id.available === 1">
+                                    Available
+                                </div>
+                                <div class="badge badge-danger" *ngIf="product.product_id.available === 0">
+                                    Unavailable
+                                </div>
+                            </td>
+                            <td>{{product.product_id.rate}}</td>
+                          </tr>
+                        </tbody>
+                    </table>
+                </div>                  
+            </div>
+        </div>
+    </div>
+</div>

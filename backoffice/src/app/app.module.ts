@@ -16,6 +16,16 @@ import { ErrorInterceptor } from "./helpers/error.interceptor";
 import { JwtInterceptor } from "./helpers/jwt.interceptors";
 import { IndexComponent } from './components/dashboard/index/index.component';
 import { TableComponent } from './components/dashboard/table/table.component';
+import { SalesComponent } from './components/dashboard/sales/sales.component';
+import { DetailsComponent } from './components/dashboard/sales/details/details.component';
+import { ProductsComponent } from './components/dashboard/products/products.component';
+import { UsersComponent } from './components/dashboard/users/users.component';
+import { ServicesComponent } from './components/dashboard/services/services.component';
+import { TicketsComponent } from './components/dashboard/tickets/tickets.component';
+import { ProspectsComponent } from './components/dashboard/prospects/prospects.component';
+import { SchedulesComponent } from './components/dashboard/schedules/schedules.component';
+import { MessagesComponent } from './components/dashboard/messages/messages.component';
+import { ProfileComponent } from './components/dashboard/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +36,17 @@ import { TableComponent } from './components/dashboard/table/table.component';
     AlertComponent,
     NavbarComponent,
     IndexComponent,
-    TableComponent
+    TableComponent,
+    SalesComponent,
+    DetailsComponent,
+    ProductsComponent,
+    UsersComponent,
+    ServicesComponent,
+    TicketsComponent,
+    ProspectsComponent,
+    SchedulesComponent,
+    MessagesComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

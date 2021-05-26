@@ -7,13 +7,15 @@
 
 .dashboard-components .current-date
 {
-    background-color: rgba(200, 200, 200, 0.4);
+    background-color: #ffeedc;
     padding: 10px;
-    border-radius: 3px;
+    border-radius: 4px;
     width: 50%;
     float: right;
-    color: #858585;
+    color: #ff8008;
     text-align: center;
     font-size: 15px;
+    margin-top: -10px;
+    margin-bottom: 20px;
 
 }

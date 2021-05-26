@@ -23,8 +23,8 @@ export class IndexComponent implements OnInit {
   ngOnInit(){
     this.init();
     this.loadSales();
-    // this.headers = ["Sale Id","User","Ticket","Subtotal","Taxes","Actions"];
-    this.headers = ["Sale Id","User","Ticket","Subtotal","Taxes"];
+    this.headers = ["Sale Id","User","Ticket","Subtotal","Taxes","Actions"];
+    // this.headers = ["Sale Id","User","Ticket","Subtotal","Taxes"];
   }
 
   init() {
@@ -40,7 +40,7 @@ export class IndexComponent implements OnInit {
         enabled: false
       },
       colors : [
-        '#FFC837',
+        '#ff8008',
         '#FFC837'
       ],
       series: [{
@@ -58,40 +58,7 @@ export class IndexComponent implements OnInit {
     this.salesService.sales_per_user(this.page)
       .pipe()
       .subscribe(data => {
-        this.data_sales = data;
-        // this.data_sales = [];
-        // var reqComplete = new Promise(resolve => {
-        //   for(var i = 0; i < data.length; i++){
-        //     this.data_sales[i] = [];
-        //     this.data_sales[i][0] = data[i].id;
-        //     this.data_sales[i][1] = data[i].user_id;
-        //     this.data_sales[i][2] = data[i].ticket;
-        //     this.data_sales[i][3] = data[i].subtotal;
-        //     this.data_sales[i][4] = data[i].taxes;
-        //   }
-        //   resolve(this.data_sales);
-        // });
-
-
-        // if(reqComplete){
-        //   this.dataTableData = {
-        //     pagination: {
-        //       pagination : true,
-        //       pages : this.limitPage || 1,
-        //       paginator : 'circular' // Circular, Classical
-        //     },
-        //     data : this.data_sales,
-        //     headers : this.headers,
-        //     buttons : {
-        //       init: true,
-        //       list : ['details','edit','remove'], // Details, Edit, Remove, Show, Download, Print
-        //       url : environment.Dashboard,
-        //       position: 'end' // Start, End
-        //     },
-        //     sort: true
-        //   };
-        // }
-        
+        this.data_sales = data;        
       }, error => {
         console.error(error);
       })

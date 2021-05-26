@@ -86,8 +86,27 @@
         <div class="card card-table">
             <div class="card-body">
                 <h5 class="card-title">Latest Sales</h5>
-                <!-- <kraken-table [table]="dataTableData"></kraken-table> -->
-                
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col" *ngFor="let header of headers">{{header}}</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let data of data_sales">
+                        <th scope="row">{{data.id}}</th>
+                        <td>{{data.user_id.first_name}} {{data.user_id.last_name}}</td>
+                        <td>{{data.ticket}}</td>
+                        <td>{{data.subtotal}}</td>
+                        <td>{{data.taxes}}</td>
+                        <td class="buttons">
+                            <a class="btn btn-info btn-round" [routerLink]="['/sales', data.id]"><i class="fas fa-info"></i></a> 
+                            <button class="btn btn-danger btn-round"><i class="fas fa-minus-circle"></i></button>
+                        </td>
+                      </tr>
+                    </tbody>
+                </table>
+                  
             </div>
         </div>
     </div>

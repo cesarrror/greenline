@@ -12,7 +12,7 @@ import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 })
 export class DashboardComponent implements OnInit {
   public user;
-  public ComponentName;
+  public ComponentName: any;
   public today;
 
   constructor(
@@ -35,8 +35,10 @@ export class DashboardComponent implements OnInit {
       }
     }
 
-    let componentName = this.constructor.name.toLowerCase();
-    componentName = componentName.replace('component','');
+    let componentName = this.router.url;
+    // let componentName = this.constructor.name.toLowerCase();
+    // componentName = componentName.replace('component','');
+    componentName = componentName.split('/')[0] !== '' ? componentName.split('/')[0] : componentName.split('/')[1];
     this.ComponentName = componentName;
 
     this.getCurrentDate();
